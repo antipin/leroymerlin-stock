@@ -8,6 +8,27 @@ Leroymerlin stock
 
 ![](/docs/screenshot-table.png?raw=true)
 
+Установка
+---------
+
+Скрипт написан на ``node.js``, поэтому вам нужны установленные ``node`` и пакетный менеджер ``npm``.
+
+```
+git clone git@github.com:antipin/leroymerlin-stock.git
+cd ./leroymerlin-stock
+npm install
+```
+
+Запуск
+------
+
+Скрипт формирует html-код и выводит его в ``stdout``. Чтобы записать вывод в файл, используйте оператор ``>``
+
+```
+node ./src/index.js > ~/table.html
+```
+Далее откройте файл ``~/table.html`` в браузере.
+
 English
 -------
 
