@@ -8,12 +8,12 @@ const skuList = compactSkuList(data)
 
 fetch(skuList, (error, result) => {
 
-	if( error ) {
-		
-		console.error(error)
+    if( error ) {
+        
+        console.error(error)
 
-	}
+    }
 
-	console.log(render(result))
+    console.log(render(result))
 
 })

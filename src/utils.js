@@ -1,20 +1,20 @@
 function compactSkuList(skuList) {
 
-	return skuList.reduce(
-		(accum, [ sku, quantity ]) => {
+    return skuList.reduce(
+        (accum, [ sku, quantity ]) => {
 
-			accum[sku] = accum[sku] || 0
-			accum[sku] += quantity
+            accum[sku] = accum[sku] || 0
+            accum[sku] += quantity
 
-			return accum
+            return accum
 
-		},
-		Object.create(null)
-	 )
+        },
+        Object.create(null)
+     )
 
 }
 
 
 module.exports = {
-	compactSkuList,
+    compactSkuList,
 }
