@@ -3,7 +3,7 @@
 const { fetch } = require('./fetcher')
 const { render } = require('./reporter')
 const { compactSkuList } = require('./utils')
-const data = require('../sku-list.json')
+const data = require('../sku-list.js')
 const skuList = compactSkuList(data)
 
 fetch(skuList, (error, result) => {
