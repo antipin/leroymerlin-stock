@@ -1,4 +1,5 @@
 const zipObject = require('lodash/zipObject')
+const pick = require('lodash/pick')
 
 function parseCSRFToken(text) {
 
@@ -75,6 +76,7 @@ function parseLocations(text) {
     const inStocks = mathcAll(text, inStockPattern).map(inStock =>  parseInt(inStock, 10))
 
     return zipObject(names, inStocks)
+    //return pick(zipObject(names, inStocks), 'Юдино', 'Красногорск')
 
 }
 
