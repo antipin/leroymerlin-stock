@@ -58,6 +58,7 @@ function convertDataToRows(products) {
     const locationColumns = Object.keys(locations)
     const tableHeader = [ 'Артикул', 'Изображение', 'Название', 'Необходимое кол-во', 'Цена', ...locationColumns ]
     const tableBody = []
+    let totalPrice = 0
 
     for (let productRequest of products) {
 
@@ -69,6 +70,7 @@ function convertDataToRows(products) {
             quantity,
             `${product.price}&nbsp;руб.`,
         ]
+        totalPrice += product.price * quantity
 
         for (const locationColumn of locationColumns) {
 
@@ -88,7 +90,9 @@ function convertDataToRows(products) {
 
     }
 
-    return [ tableHeader, ...tableBody ]
+    const tableFooter = [ '', '', '', '', `${totalPrice}&nbsp;руб.` ]
+
+    return [ tableHeader, ...tableBody, tableFooter ]
 
 }
 
